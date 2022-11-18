@@ -41,7 +41,7 @@ function capAfterSpace(string) {
     // iterate over each word
      for (let i = 0; i < words.length; i++) {
         // capitilize first letter the concatenate capped first letter with the rest of the string
-        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1); // I had to research on how to get to the first character only 
      }
     //  join words to form sentence
      let newString = words.join(" ");
