@@ -1,0 +1,178 @@
+/* mobile first */
+:root {
+    --primary-color: #03dac5;
+    --on-background: rgba(255, 255, 255, 0.9);
+    --background: #121212;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+   }
+  
+body {
+    margin: 0;
+    color: var(--on-background);
+    font-family: sans-serif;
+    background-color: var(--background);
+   }
+   /* Navigation */
+    /* break into vertical menu */
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
+    }
+  
+    /* show hamburger icon */
+    #hamnav label {
+      display: inline-block;
+      color: white;
+      background: var(--secondary-color);
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+    /* toggle show/hide menu */
+    #hamburger {
+        display: none;
+    }
+    #hamitems {
+      display: none;
+    }
+    #hamnav input:checked ~ #hamitems {
+      display: block;
+    }
+
+    #hamnav {
+        width: 100;
+        background: #000;
+        padding: 10px;
+       }
+      
+      /* horizontal menu items */
+
+      #hamitems a {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 15px;
+        color: white;
+        
+      }
+      
+      #hamitems a:hover {
+        background-color: var(--primary-color);
+        color:#000;
+      }
+      
+    h1 {
+      font-size: 10vh;
+      margin-right: 5vw;
+      margin-left: 5vw;
+
+    }
+  
+    h2 {
+      font-size: 5vh;
+      margin-right: 5vw;
+      margin-left: 5vw;
+    }
+
+    #services h2,
+    #about h2,
+    #contact h2 {
+        font-size: 4vh;
+        margin-left: 40vw;
+    }
+  
+    p {
+      padding-left: 50px;
+      padding-right: 40px;
+    }
+
+  
+   h3 {
+    font-size: 2.5vh;
+    margin-left: 20px;
+   }
+  
+   a {
+    margin-left: 20px;
+   }
+   
+   button {
+    text-align: left;
+    padding: 5px;
+    
+   }
+   
+   .buttons {
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+   }
+   .social-icons {
+    display: flex;
+    justify-content: center;
+   }
+   .fab,
+   .fa {
+    font-size: 8vh;
+    margin-top: 5vh;
+    margin-right: 10vw;
+    cursor: pointer;
+    color: var(--primary-color);
+
+   }
+
+   .image {
+    text-align: center;
+   }
+
+   /* services */
+
+  .services {
+  text-align: center;
+ }
+
+ ul {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+ }
+
+ li {
+  margin: 10px 10px 10px 0;
+ }
+
+ @media only screen and (min-width: 768px) {
+    /* navigation */
+    #hamitems {
+        display: flex;
+        text-align: center;
+      }
+
+    #hamnav label,
+    #hamburger {
+    display: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    #services h2,
+    #about h2,
+    #contact h2 {
+        margin-left: 4vw;
+    }
+
+    .fab,
+   .fa {
+    font-size: 10vh;
+    margin-top: 5vh;
+    margin-right: 5vw;
+   }
+ }
